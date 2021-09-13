@@ -14,7 +14,7 @@ Daily_bonus = 0.001 #Put daily bonus amount here!
 Mini_Withdraw = 0.5  #remove 0 and add the minimum withdraw u want to set
 Per_Refer = 0.0001 #add per refer bonus here
 
-client = TelegramClient('mrunal', api_id, api_hash).start(bot_token=BOT_TOKEN)
+client = TelegramClient('mrunal', api_id, api_hash).start(bot_token=token)
 bot=client
 
 def check(id):
