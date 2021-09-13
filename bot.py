@@ -14,7 +14,8 @@ Daily_bonus = 0.001 #Put daily bonus amount here!
 Mini_Withdraw = 0.5  #remove 0 and add the minimum withdraw u want to set
 Per_Refer = 0.0001 #add per refer bonus here
 
-bot = telebot.teleBot(BOT_TOKEN)
+client = TelegramClient('mrunal', api_id, api_hash).start(bot_token=BOT_TOKEN)
+bot=client
 
 def check(id):
     for i in CHANNELS:
@@ -27,7 +28,7 @@ def check(id):
 bonus = {}
 
 def menu(id):
-    keyboard = telebot.types.ReplyKeyboardMarkup(True)
+    keyboard = client.types.ReplyKeyboardMarkup(True)
     keyboard.row('🆔 Account')
     keyboard.row('🙌🏻 Referrals', '🎁 Bonus', '💸 Withdraw')
     keyboard.row('⚙️ Set Wallet', '📊Statistics')
@@ -35,7 +36,7 @@ def menu(id):
                      reply_markup=keyboard)
 
 
-@bot.message_handler(commands=['start'])
+@client.on(commands=['start'])
 def start(message):
     user = message.chat.id
     msg = message.text
@@ -165,7 +166,7 @@ def query_handler(call):
                              parse_mode="Markdown", reply_markup=markup)
 
 
-@bot.message_handler(content_types=['text'])
+@client.on(content_types=['text'])
 def send_text(message):
     if message.text == '🆔 Account':
         data = json.load(open('users.json', 'r'))
