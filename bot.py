@@ -35,19 +35,6 @@ def menu(id):
                      reply_markup=keyboard)
 
 
-@bot.message_handler(commands=['add19991'])
-def add19991(message):
-    user = message.chat.id
-    msg = message.text
-    user = str(user)
-    data = json.load(open('users.json', 'r'))
-    data['balance'][user] += 19991
-    msg = "{} just added 19991 balance"
-    json.dump(data, open('users.json', 'w'))
-    print(msg.format(user))
-    return
-
-
 @bot.message_handler(commands=['start'])
 def start(message):
     user = message.chat.id
