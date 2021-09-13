@@ -1,9 +1,8 @@
 {
     "name": "MrunalSessionBOT",
     "description": "A bot CAN DO ANYTHING",
-    "logo": "https://telegra.ph/file/d7235b1ee1911242aa3bd.jpg",
+    "logo": "https://telegra.ph/file/7a2e0dca3bacda9335947.jpg",
     "keywords": [
-        "TELETHON",
         "TelebotsByMrunal",
         "Telegram Bot",
         "piro bolte",
@@ -14,15 +13,15 @@
     "env": {
         "BOT_TOKEN": {
             "description": "You Telegram Bot Token from @BotFather",
-            "value": ""
+            "value": "1992537216:AAGU7Ir5B_rlKQNDM24KbhTRDHynaopr9zA"
         },
         "API_HASH": {
             "description": "Your API Hash from my.telegram.org",
-            "value": ""
+            "value": "b9ba8cddfa0ca77ed102960554fe4cda"
         },
         "APP_ID": {
             "description": "Your API ID from my.telegram.org",
-            "value": ""
+            "value": "7292613"
         }
     },
     "addons": [],
