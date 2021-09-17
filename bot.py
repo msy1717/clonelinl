@@ -1,5 +1,5 @@
 from __future__ import unicode_literals
-import TelegramClient
+from telethon import TelegramClient
 import asyncio
 import math
 import os
