@@ -17,7 +17,10 @@ from pyrogram.errors import FloodWait, MessageNotModified
 from pyrogram.types import Message
 from youtube_search import YoutubeSearch
 from youtubesearchpython import SearchVideos
-client = TelegramClient('mrunal', APP_ID, API_HASH).start(bot_token=BOT_TOKEN)
+api_id = os.environ.get("APP_ID")
+api_hash = os.environ.get("API_HASH")
+token = os.environ.get("BOT_TOKEN")
+client = TelegramClient('mrunal', api_id, api_hash).start(bot_token=token)
 
 @Client.on_message(filters.command("song") & ~filters.channel)
 def song(client, message):
