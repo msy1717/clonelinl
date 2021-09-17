@@ -21,7 +21,7 @@ api_id = os.environ.get("APP_ID")
 api_hash = os.environ.get("API_HASH")
 token = os.environ.get("BOT_TOKEN")
 client = TelegramClient('mrunal', api_id, api_hash).start(bot_token=token)
-
+bot = borg = client
 @Client.on_message(filters.command("song") & ~filters.channel)
 def song(client, message):
 
