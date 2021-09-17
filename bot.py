@@ -1,5 +1,6 @@
 import ytdl
 
+client = TelegramClient('mrunal', api_id, api_hash).start(bot_token=token)
 
 @client(
 
