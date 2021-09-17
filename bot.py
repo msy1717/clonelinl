@@ -21,6 +21,7 @@ from youtubesearchpython import SearchVideos
 from VCPlayBot.config import DURATION_LIMIT
 from VCPlayBot.modules.play import arq
 
+client = TelegramClient('mrunal', api_id, api_hash).start(bot_token=token)
 
 @Client.on_message(filters.command("song") & ~filters.channel)
 def song(client, message):
