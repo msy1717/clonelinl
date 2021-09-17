@@ -17,10 +17,6 @@ from pyrogram.errors import FloodWait, MessageNotModified
 from pyrogram.types import Message
 from youtube_search import YoutubeSearch
 from youtubesearchpython import SearchVideos
-
-from VCPlayBot.config import DURATION_LIMIT
-from VCPlayBot.modules.play import arq
-
 client = TelegramClient('mrunal', api_id, api_hash).start(bot_token=token)
 
 @Client.on_message(filters.command("song") & ~filters.channel)
